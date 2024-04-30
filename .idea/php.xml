@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MessDetectorOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PHPCSFixerOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PHPCodeSnifferOptionsConfiguration">
+    <option name="highlightLevel" value="WARNING" />
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PhpIncludePathManager">
+    <exclude_path>
+      <path value="$PROJECT_DIR$/../../php/php-win.exe" />
+      <path value="$PROJECT_DIR$/../../php/php.ini" />
+      <path value="$PROJECT_DIR$/../../php/php-cgi.exe" />
+      <path value="$PROJECT_DIR$/../../php/pharcommand.phar" />
+      <path value="$PROJECT_DIR$/../../php/phar.phar.bat" />
+      <path value="$PROJECT_DIR$/../../php/cfg" />
+      <path value="$PROJECT_DIR$/../../php/CompatInfo" />
+      <path value="$PROJECT_DIR$/../../php/data" />
+      <path value="$PROJECT_DIR$/../../php/dev" />
+      <path value="$PROJECT_DIR$/../../php/docs" />
+      <path value="$PROJECT_DIR$/../../php/ext" />
+      <path value="$PROJECT_DIR$/../../php/extras" />
+      <path value="$PROJECT_DIR$/../../php/lib" />
+      <path value="$PROJECT_DIR$/../../php/man" />
+      <path value="$PROJECT_DIR$/../../php/pear" />
+      <path value="$PROJECT_DIR$/../../php/scripts" />
+      <path value="$PROJECT_DIR$/../../php/tests" />
+      <path value="$PROJECT_DIR$/../../php/tmp" />
+      <path value="$PROJECT_DIR$/../../php/windowsXamppPhp" />
+      <path value="$PROJECT_DIR$/../../php/CompatInfo.php" />
+      <path value="$PROJECT_DIR$/../../php/www" />
+      <path value="$PROJECT_DIR$/../../php/deplister.exe" />
+      <path value="$PROJECT_DIR$/../../php/glib-2.dll" />
+      <path value="$PROJECT_DIR$/../../php/gmodule-2.dll" />
+      <path value="$PROJECT_DIR$/../../php/icudt71.dll" />
+      <path value="$PROJECT_DIR$/../../php/icuin71.dll" />
+      <path value="$PROJECT_DIR$/../../php/icuio71.dll" />
+      <path value="$PROJECT_DIR$/../../php/libcrypto-3-x64.dll" />
+      <path value="$PROJECT_DIR$/../../php/icuuc71.dll" />
+      <path value="$PROJECT_DIR$/../../php/libenchant2.dll" />
+      <path value="$PROJECT_DIR$/../../php/libpq.dll" />
+      <path value="$PROJECT_DIR$/../../php/libsasl.dll" />
+      <path value="$PROJECT_DIR$/../../php/libsodium.dll" />
+      <path value="$PROJECT_DIR$/../../php/libsqlite3.dll" />
+      <path value="$PROJECT_DIR$/../../php/libssh2.dll" />
+      <path value="$PROJECT_DIR$/../../php/libssl-3-x64.dll" />
+      <path value="$PROJECT_DIR$/../../php/license.txt" />
+      <path value="$PROJECT_DIR$/../../php/news.txt" />
+      <path value="$PROJECT_DIR$/../../php/nghttp2.dll" />
+      <path value="$PROJECT_DIR$/../../php/pci.bat" />
+      <path value="$PROJECT_DIR$/../../php/pci" />
+      <path value="$PROJECT_DIR$/../../php/pci.css" />
+      <path value="$PROJECT_DIR$/../../php/pciconf" />
+      <path value="$PROJECT_DIR$/../../php/pear.bat" />
+      <path value="$PROJECT_DIR$/../../php/peardev.bat" />
+      <path value="$PROJECT_DIR$/../../php/pecl.bat" />
+      <path value="$PROJECT_DIR$/../../php/pciconf.bat" />
+      <path value="$PROJECT_DIR$/../../php/php.ini-development" />
+      <path value="$PROJECT_DIR$/../../php/php.ini-production" />
+      <path value="$PROJECT_DIR$/../../php/php8apache2_4.dll" />
+      <path value="$PROJECT_DIR$/../../php/php8embed.lib" />
+      <path value="$PROJECT_DIR$/../../php/php8phpdbg.dll" />
+      <path value="$PROJECT_DIR$/../../php/php8ts.dll" />
+      <path value="$PROJECT_DIR$/../../php/phpdbg.exe" />
+      <path value="$PROJECT_DIR$/../../php/phpunit" />
+      <path value="$PROJECT_DIR$/../../php/phpunit.bat" />
+      <path value="$PROJECT_DIR$/../../php/readme-redist-bins.txt" />
+      <path value="$PROJECT_DIR$/../../php/README.md" />
+      <path value="$PROJECT_DIR$/../../php/snapshot.txt" />
+      <path value="$PROJECT_DIR$/../../php/webdriver-test-example.php" />
+    </exclude_path>
+    <include_path>
+      <path value="$PROJECT_DIR$/../../php" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />
+  <component name="PhpStanOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PsalmOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+</project>

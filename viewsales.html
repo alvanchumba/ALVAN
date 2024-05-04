@@ -7,7 +7,8 @@
 </head>
 <body>
 <h2>Sales Data</h2>
-<table border="1">
+<table id="salesTable" border="1">
+    <thead>
     <tr>
         <th>ID</th>
         <th>Daily Sales</th>
@@ -15,9 +16,51 @@
         <th>Sale Date</th>
         <th>Sale Time</th>
     </tr>
-
-    <?php include 'retrieve_sales.php'; ?>
-
+    </thead>
+    <tbody id="salesTableBody"></tbody>
 </table>
+
+<script>
+    // Function to fetch sales data from the server
+    function fetchSalesData() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'retrieve_sales.php', true);
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    var salesData = JSON.parse(xhr.responseText);
+                    populateSalesTable(salesData);
+                } else {
+                    console.error('Failed to fetch sales data');
+                }
+            }
+        };
+        xhr.send();
+    }
+
+    // Function to populate the sales table with data
+    function populateSalesTable(salesData) {
+        var tableBody = document.getElementById('salesTableBody');
+        for (var i = 0; i < salesData.length; i++) {
+            var row = tableBody.insertRow(-1);
+            var cellId = row.insertCell(0);
+            var cellDailySales = row.insertCell(1);
+            var cellTotalRemaining = row.insertCell(2);
+            var cellSaleDate = row.insertCell(3);
+            var cellSaleTime = row.insertCell(4);
+
+            cellId.textContent = salesData[i].id;
+            cellDailySales.textContent = salesData[i].daily_sales;
+            cellTotalRemaining.textContent = salesData[i].total_remaining;
+            cellSaleDate.textContent = salesData[i].sale_date;
+            cellSaleTime.textContent = salesData[i].sale_time;
+        }
+    }
+
+    // Call the fetchSalesData function to populate the table when the page loads
+    fetchSalesData();
+</script>
 </body>
 </html>
+
+

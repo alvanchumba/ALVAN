@@ -6,7 +6,7 @@ $password = "@Akc15064";
 $database = "project";
 
 // Create connection
-$conn = new mysqli("localhost", "kipruto", "@Akc15064", "project");
+$conn = new mysqli($servername, $username, $password, $database);
 
 // Check connection
 if ($conn->connect_error) {
@@ -19,23 +19,22 @@ $sql = "SELECT * FROM sales";
 // Execute the query
 $result = $conn->query($sql);
 
+// Initialize an empty array to store the fetched data
+$salesData = [];
+
 // Check if there are any rows returned
 if ($result->num_rows > 0) {
-    // Output data of each row
+    // Fetch each row and add it to the salesData array
     while ($row = $result->fetch_assoc()) {
-        echo "<tr>";
-        echo "<td>" . $row["id"] . "</td>";
-        echo "<td>" . $row["daily_sales"] . "</td>";
-        echo "<td>" . $row["total_remaining"] . "</td>";
-        echo "<td>" . $row["sale_date"] . "</td>";
-        echo "<td>" . $row["sale_time"] . "</td>";
-        echo "</tr>";
+        $salesData[] = $row;
     }
-} else {
-    echo "0 results";
 }
 
 // Close the database connection
 $conn->close();
+
+// Output the sales data as JSON
+echo json_encode($salesData);
 ?>
+
 

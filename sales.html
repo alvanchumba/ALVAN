@@ -56,8 +56,9 @@
     <input type="time" id="sale_time" name="sale_time" required>
 
     <input type="button" value="Submit" onclick="submitForm()">
+    <input type="button" value="CheckSales" onclick="checksales()">
 </form>
-<a href="viewsales.html">View Sales Data</a>
+
 
 <script>
     function submitForm() {
@@ -95,6 +96,9 @@
             '&total_remaining=' + total_remaining +
             '&sale_date=' + sale_date +
             '&sale_time=' + sale_time);
+    }
+    function checksales() {
+        window.location.href="viewsales.html";
     }
 </script>
 </body>

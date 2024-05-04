@@ -3,14 +3,14 @@
 session_start();
 
 // Database credentials
-$servername = "kipruto";
-$username = "root";
+$servername = "localhost";
+$username = "alvan";
 $password = "@Akc15064";
 $database = "project";
 
 // Create connection
 
-$conn = new mysqli("localhost", "kipruto", "@Akc15064", "project");
+$conn = new mysqli("localhost", "alvan", "@Akc15064", "project");
 
 
 // Check connection

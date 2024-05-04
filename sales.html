@@ -42,7 +42,7 @@
 </head>
 <body>
 <h2>Sales Form</h2>
-<form action="submit_sales.php" method="post">
+<form id="salesForm">
     <label for="daily_sales">Daily Amount Sold:</label>
     <input type="number" id="daily_sales" name="daily_sales" required>
 
@@ -55,8 +55,48 @@
     <label for="sale_time">Time:</label>
     <input type="time" id="sale_time" name="sale_time" required>
 
-    <input type="submit" value="Submit">
+    <input type="button" value="Submit" onclick="submitForm()">
 </form>
 <a href="viewsales.html">View Sales Data</a>
+
+<script>
+    function submitForm() {
+        // Get form data
+        var daily_sales = document.getElementById('daily_sales').value;
+        var total_remaining = document.getElementById('total_remaining').value;
+        var sale_date = document.getElementById('sale_date').value;
+        var sale_time = document.getElementById('sale_time').value;
+
+        // Create a new XMLHttpRequest object
+        var xhr = new XMLHttpRequest();
+
+        // Configure the request
+        xhr.open('POST', 'submit_sales.php', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+        // Define what happens on successful data submission
+        xhr.onload = function () {
+            if (xhr.status >= 200 && xhr.status < 300) {
+                console.log('Sales data submitted successfully');
+                // Redirect to another page after successful submission
+                window.location.href = 'sales.html';
+            } else {
+                console.error('Error:', xhr.statusText);
+            }
+        };
+
+        // Define what happens in case of error
+        xhr.onerror = function () {
+            console.error('Request failed');
+        };
+
+        // Send the request with form data
+        xhr.send('daily_sales=' + daily_sales +
+            '&total_remaining=' + total_remaining +
+            '&sale_date=' + sale_date +
+            '&sale_time=' + sale_time);
+    }
+</script>
 </body>
 </html>
+

@@ -8,21 +8,25 @@
 <body>
 <div class="container">
     <h2>Login</h2>
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required>
+    <form id="loginForm" action="login.php" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
 
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password"  required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
 
-    <button onclick="login()">Login</button>
+        <button type="submit">Login</button>
+    </form>
 </div>
 <script>
-    function login() {
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the default form submission behavior
+
         let username = document.getElementById("username").value;
-       let password = document.getElementById("password").value;
+        let password = document.getElementById("password").value;
 
         // Create a new XMLHttpRequest object
-       const xhr = new XMLHttpRequest();
+        const xhr = new XMLHttpRequest();
 
         // Configure the request
         xhr.open('POST', 'login.php', true);
@@ -44,8 +48,9 @@
 
         // Send the request with username and password
         xhr.send('username=' + encodeURIComponent(username) + '&password=' + encodeURIComponent(password));
-    }
+    });
 </script>
 </body>
 </html>
+
 

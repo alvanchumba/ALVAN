@@ -18,11 +18,11 @@
 </div>
 <script>
     function login() {
-        var username = document.getElementById("username").value;
-        var password = document.getElementById("password").value;
+        let username = document.getElementById("username").value;
+       let password = document.getElementById("password").value;
 
         // Create a new XMLHttpRequest object
-        var xhr = new XMLHttpRequest();
+       const xhr = new XMLHttpRequest();
 
         // Configure the request
         xhr.open('POST', 'login.php', true);

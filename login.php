@@ -21,7 +21,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     $password = $_POST['password'];
 
     // Prepare SQL statement to fetch user with matching credentials
-    $stmt = $conn->prepare("SELECT * FROM users WHERE username = ? AND password = ?");
+    $stmt = $conn->prepare("SELECT * FROM signup WHERE username = ? AND password = ?");
     $stmt->bind_param("ss", $username, $password);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -37,6 +37,6 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         echo "Invalid username or password";
     }
 }
-?>
+
 
 

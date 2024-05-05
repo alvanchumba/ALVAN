@@ -63,13 +63,13 @@
 <script>
     function submitForm() {
         // Get form data
-        var daily_sales = document.getElementById('daily_sales').value;
-        var total_remaining = document.getElementById('total_remaining').value;
-        var sale_date = document.getElementById('sale_date').value;
-        var sale_time = document.getElementById('sale_time').value;
+        let daily_sales = document.getElementById('daily_sales').value;
+      let total_remaining = document.getElementById('total_remaining').value;
+        let sale_date = document.getElementById('sale_date').value;
+        let sale_time = document.getElementById('sale_time').value;
 
         // Create a new XMLHttpRequest object
-        var xhr = new XMLHttpRequest();
+        const xhr = new XMLHttpRequest();
 
         // Configure the request
         xhr.open('POST', 'submit_sales.php', true);

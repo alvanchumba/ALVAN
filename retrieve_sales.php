@@ -1,12 +1,12 @@
 <?php
 // Database credentials
 $servername = "localhost";
-$username = "kipruto";
+$username = "alvan";
 $password = "@Akc15064";
 $database = "project";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $database);
+$conn = new mysqli("localhost","alvan","@Akc15064","project" );
 
 // Check connection
 if ($conn->connect_error) {
@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 }
 
 // SQL query to retrieve sales data
-$sql = "SELECT * FROM sales";
+$sql = "SELECT *FROM sales ";
 
 // Execute the query
 $result = $conn->query($sql);
@@ -35,6 +35,6 @@ $conn->close();
 
 // Output the sales data as JSON
 echo json_encode($salesData);
-?>
+
 
 

@@ -8,7 +8,7 @@
 <body>
 <div class="container">
     <h2>Login</h2>
-    <form id="loginForm" action="login.php" method="post">
+    <form id="loginForm">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
 
@@ -25,32 +25,35 @@
         let username = document.getElementById("username").value;
         let password = document.getElementById("password").value;
 
-        // Create a new XMLHttpRequest object
-        const xhr = new XMLHttpRequest();
+        // Basic input validation
+        if (!username || !password) {
+            alert("Please enter both username and password");
+            return;
+        }
 
-        // Configure the request
-        xhr.open('POST', 'login.php', true);
-        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-
-        // Define what happens on successful login
-        xhr.onload = function () {
-            if (xhr.status >= 200 && xhr.status < 300) {
-                window.location.href = 'sales.html'; // Redirect to sales.html upon successful login
-            } else {
-                console.error('Login failed:', xhr.statusText);
-            }
-        };
-
-        // Define what happens in case of error
-        xhr.onerror = function () {
-            console.error('Request failed');
-        };
-
-        // Send the request with username and password
-        xhr.send('username=' + encodeURIComponent(username) + '&password=' + encodeURIComponent(password));
+        // Fetch API for making HTTP requests
+        fetch('login.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ username, password })
+        })
+            .then(response => {
+                if (response.ok) {
+                    window.location.href = 'sales.html'; // Redirect to sales.html upon successful login
+                } else {
+                    throw new Error('Login failed');
+                }
+            })
+            .catch(error => {
+                console.error('Login failed:', error.message);
+                alert('Login failed. Please try again.'); // Inform the user about login failure
+            });
     });
 </script>
 </body>
 </html>
+
 
 

@@ -3,12 +3,12 @@ session_start();
 
 // Database credentials
 $servername = "localhost";
-$username = "alvan"; // Replace with your database username
-$password = "@Akc15064"; // Replace with your database password
+$username = "chumba"; // Replace with your database username
+$password = "Landscape45"; // Replace with your database password
 $database = "project"; // Replace with your database name
 
 // Create connection
-$conn = new mysqli("localhost","alvan","@Akc15064", "project");
+$conn = new mysqli("localhost","chumba","Landscape45", "project");
 
 // Check connection
 if ($conn->connect_error) {

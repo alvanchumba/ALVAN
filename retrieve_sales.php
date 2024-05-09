@@ -1,12 +1,12 @@
 <?php
 // Database credentials
 $servername = "localhost";
-$username = "alvan";
-$password = "@Akc15064";
+$username = "chumba";
+$password = "Landscape45";
 $database = "project";
 
 // Create connection
-$conn = new mysqli("localhost","alvan","@Akc15064","project" );
+$conn = new mysqli("localhost","chumba","Landscape45","project" );
 
 // Check connection
 if ($conn->connect_error) {
